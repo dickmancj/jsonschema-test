@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "properties": {
+    "lookupTables": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "configValues": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      }
+    }
+  },
+  "additionalProperties": false
+}
