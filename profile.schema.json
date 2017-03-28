@@ -1,54 +1,33 @@
 {
-  "id": "http://nchannel.github.io/schema/v1/AutomationProfile",
   "properties": {
     "Type": {
-      "id": "http://nchannel.github.io/schema/v1/AutomationProfile/Type",
       "type": "string"
     },
     "_id": {
-      "id": "http://nchannel.github.io/schema/v1/AutomationProfile/automationProfileID",
       "type": "string"
     },
     "accountID": {
-      "id": "http://nchannel.github.io/schema/v1/AutomationProfile/accountID",
       "type": "string"
     },
     "audit": {
-      "id": "http://nchannel.github.io/schema/v1/AutomationProfile/audit",
-      "type": "object"
-      },
-      "required": [
-        "deleted",
-        "auditUser",
-        "dateCreatedUTC",
-        "deletedDateUTC",
-        "dateModifiedUTC",
-        "dataTag"
-      ],
       "type": "object"
     },
     "automationProfileTemplateID": {
-      "id": "http://nchannel.github.io/schema/v1/AutomationProfile/automationProfileTemplateID",
       "type": "string"
     },
     "description": {
-      "id": "http://nchannel.github.io/schema/v1/AutomationProfile/description",
       "type": "string"
     },
     "flows": {
-      "id": "http://nchannel.github.io/schema/v1/AutomationProfile/flows",
       "items": {
-        "id": "http://nchannel.github.io/schema/v1/AutomationProfile/flows/0",
         "type": "object"
       },
       "type": "array"
     },
     "name": {
-      "id": "http://nchannel.github.io/schema/v1/AutomationProfile/name",
       "type": "string"
     },
     "salesFulfillmentFileds": {
-      "id": "http://nchannel.github.io/schema/v1/AutomationProfile/salesFulfillmentFileds",
       "type": "object"
     }
   },
@@ -56,9 +35,7 @@
     "_id",
     "audit",
     "automationProfileTemplateID",
-    "flows",
     "accountID",
-    "Type",
     "name"
   ],
   "type": "object"
