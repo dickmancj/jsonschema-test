@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "properties": {
+    "config": {
+      "type": "array",
+      "items":{
+        "$ref": "https://dickmancj.github.io/jsonschema-test/config.schema.json"
+      }
+    },
+    "configValues": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      }
+    }
+  },
+  "additionalProperties": false
+}
