@@ -1,5 +1,4 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
   "id": "http://nchannel.github.io/schema/v1/AutomationProfile",
   "properties": {
     "Type": {
