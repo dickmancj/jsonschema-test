@@ -1,18 +1,140 @@
 {
-  "type": "object",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://nchannel.github.io/schema/v1/AutomationProfile",
   "properties": {
-    "_id": {
+    "Type": {
+      "id": "http://nchannel.github.io/schema/v1/AutomationProfile/Type",
       "type": "string"
+    },
+    "_id": {
+      "id": "http://nchannel.github.io/schema/v1/AutomationProfile/automationProfileID",
+      "type": "string"
+    },
+    "accountID": {
+      "id": "http://nchannel.github.io/schema/v1/AutomationProfile/accountID",
+      "type": "string"
+    },
+    "audit": {
+      "id": "http://nchannel.github.io/schema/v1/AutomationProfile/audit",
+      "properties": {
+        "auditUser": {
+          "id": "http://nchannel.github.io/schema/v1/AutomationProfile/audit/auditUser",
+          "type": "string"
+        },
+        "dataTag": {
+          "id": "http://nchannel.github.io/schema/v1/AutomationProfile/audit/dataTag",
+          "type": "string"
+        },
+        "dateCreatedUTC": {
+          "id": "http://nchannel.github.io/schema/v1/AutomationProfile/audit/dateCreatedUTC",
+          "type": "string"
+        },
+        "dateModifiedUTC": {
+          "id": "http://nchannel.github.io/schema/v1/AutomationProfile/audit/dateModifiedUTC",
+          "type": "string"
+        },
+        "deleted": {
+          "id": "http://nchannel.github.io/schema/v1/AutomationProfile/audit/deleted",
+          "type": "boolean"
+        },
+        "deletedDateUTC": {
+          "id": "http://nchannel.github.io/schema/v1/AutomationProfile/audit/deletedDateUTC",
+          "type": "string"
+        }
+      },
+      "required": [
+        "deleted",
+        "auditUser",
+        "dateCreatedUTC",
+        "deletedDateUTC",
+        "dateModifiedUTC",
+        "dataTag"
+      ],
+      "type": "object"
+    },
+    "automationProfileTemplateID": {
+      "id": "http://nchannel.github.io/schema/v1/AutomationProfile/automationProfileTemplateID",
+      "type": "string"
+    },
+    "description": {
+      "id": "http://nchannel.github.io/schema/v1/AutomationProfile/description",
+      "type": "string"
+    },
+    "flows": {
+      "id": "http://nchannel.github.io/schema/v1/AutomationProfile/flows",
+      "items": {
+        "id": "http://nchannel.github.io/schema/v1/AutomationProfile/flows/0",
+        "properties": {
+          "automationFlowProfileID": {
+            "id": "http://nchannel.github.io/schema/v1/AutomationProfile/flows/0/automationFlowProfileID",
+            "type": "string"
+          },
+          "configValues": {
+            "description": "Allows ANY object but describes nothing.",
+            "id": "http://nchannel.github.io/schema/v1/AutomationProfile/flows/0/configValues",
+            "title": "Empty object schema.",
+            "type": "object"
+          },
+          "isEnabled": {
+            "id": "http://nchannel.github.io/schema/v1/AutomationProfile/flows/0/isEnabled",
+            "type": "boolean"
+          },
+          "isValid": {
+            "id": "http://nchannel.github.io/schema/v1/AutomationProfile/flows/0/isValid",
+            "type": "boolean"
+          },
+          "lookupTables": {
+            "id": "http://nchannel.github.io/schema/v1/AutomationProfile/flows/0/lookupTables",
+            "items": {
+              "id": "http://nchannel.github.io/schema/v1/AutomationProfile/flows/0/lookupTables/0",
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "translationProfileID": {
+            "id": "http://nchannel.github.io/schema/v1/AutomationProfile/flows/0/translationProfileID",
+            "type": "string"
+          }
+        },
+        "required": [
+          "configValues",
+          "lookupTables",
+          "isValid",
+          "isEnabled",
+          "translationProfileID",
+          "automationFlowProfileID"
+        ],
+        "type": "object"
+      },
+      "type": "array"
     },
     "name": {
+      "id": "http://nchannel.github.io/schema/v1/AutomationProfile/name",
       "type": "string"
     },
-    "config": {
-      "type": "array",
-      "items":{
-        "$ref": "https://dickmancj.github.io/jsonschema-test/config.schema.json"
-      }
+    "salesFulfillmentFileds": {
+      "id": "http://nchannel.github.io/schema/v1/AutomationProfile/salesFulfillmentFileds",
+      "properties": {
+        "fulfillmentChannelProfileID": {
+          "id": "http://nchannel.github.io/schema/v1/AutomationProfile/salesFulfillmentFileds/fulfillmentChannelProfileID",
+          "type": "string"
+        },
+        "salesChannelProfileID": {
+          "id": "http://nchannel.github.io/schema/v1/AutomationProfile/salesFulfillmentFileds/salesChannelProfileID",
+          "type": "string"
+        }
+      },
+      "type": "object"
     }
   },
-  "additionalProperties": true
+  "required": [
+    "_id",
+    "audit",
+    "automationProfileTemplateID",
+    "flows",
+    "accountID",
+    "Type",
+    "name"
+  ],
+  "type": "object"
 }
